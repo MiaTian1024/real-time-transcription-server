@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/bbcf448c-fa10-4860-86ce-b60a0e5c9711/resourceGroups/real-time-transcription/providers/Microsoft.Web/sites/real-time-transcription-server",
+    "appService.deploySubpath": "."
+}
