@@ -1,17 +1,8 @@
 const express = require('express');
-// const cors = require('cors');
 const { WebPubSubServiceClient } = require('@azure/web-pubsub');
 
 const app = express();
 const port = process.env.PORT || 8080;
-
-// const corsOptions = {
-//     origin: [
-//         "https://aistudio.contentedai.com",
-//         "https://news.contentedai.com"
-//     ], 
-//     optionsSuccessStatus: 200
-// };
 
 let service = new WebPubSubServiceClient(process.env.CONNECTION_STRING, process.env.HUB_NAME);
 
@@ -29,5 +20,4 @@ app.get('/negotiate', async (req, res) => {
   });
 });
 
-// app.use(cors(corsOptions));
 app.listen(port, () => console.log('Server started'));
